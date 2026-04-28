@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CivicLibrary v0.1.0</title>
+  <style>
+    :root{--ink:#221818;--accent:#8a3b2f;--line:#dec3bd;--card:#fff8f4}
+    body{margin:0;font-family:Aptos,Segoe UI,sans-serif;background:linear-gradient(135deg,#fff1ec,#f6f0ff);color:var(--ink)}
+    main{width:min(1100px,calc(100% - 32px));margin:auto;padding:56px 0}
+    h1{font:800 clamp(2.5rem,7vw,5.4rem)/.95 Georgia,serif;margin:.2em 0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{background:rgba(255,248,244,.94);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 18px 55px rgba(85,36,30,.12)}
+    .badge{display:inline-block;background:#ffe1d8;color:#7b3027;border-radius:999px;padding:.35rem .7rem;font-weight:800}
+    a{color:var(--accent);font-weight:700} code{background:#f7ded7;padding:.12rem .34rem;border-radius:.45rem}
+    @media(max-width:800px){.grid{grid-template-columns:1fr}main{padding:34px 0}}
+  </style>
+</head>
+<body>
+<main>
+  <span class="badge">Shipping v0.1.0</span>
+  <h1>Library support that protects patron privacy.</h1>
+  <p>CivicLibrary helps library staff draft cited policy answers, answer program questions, search collection metadata without patron records, and prepare collection-development guidance for librarian review.</p>
+  <section class="grid">
+    <article class="card"><h2>For Staff</h2><p>Draft policy answers, program replies, reference suggestions, and collection guidance that librarians verify before use.</p></article>
+    <article class="card"><h2>For IT</h2><p>FastAPI runtime pinned to <code>civiccore==0.2.0</code>, deterministic tests, and no ILS writes.</p></article>
+    <article class="card"><h2>Privacy Boundary</h2><p>Patron records are out of scope; v0.1.0 works only with public policies, program information, and collection metadata.</p></article>
+  </section>
+  <section class="card" style="margin-top:24px">
+    <h2>Architecture</h2>
+    <img src="architecture-civiclibrary.svg" alt="CivicLibrary architecture diagram" style="width:100%;height:auto">
+  </section>
+  <section class="card" style="margin-top:24px">
+    <h2>Boundaries</h2>
+    <p>CivicLibrary v0.1.0 does not access patron records, integrate with an ILS, replace professional reference service, provide legal advice, call live LLMs, or ship library connector runtime.</p>
+  </section>
+  <p>Repository: <a href="https://github.com/CivicSuite/civiclibrary">github.com/CivicSuite/civiclibrary</a></p>
+</main>
+</body>
+</html>

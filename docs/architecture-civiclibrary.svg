@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">CivicLibrary architecture</title>
+  <desc id="desc">CivicLibrary sits above CivicCore and supports library policy, program, reference, and collection guidance without accessing patron records or connecting to an ILS.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1ec"/>
+      <stop offset="1" stop-color="#f5f0ff"/>
+    </linearGradient>
+    <style>
+      .box{fill:#fff8f4;stroke:#c98b7e;stroke-width:3;rx:24}
+      .hard{fill:#fff0f2;stroke:#b95d69;stroke-width:3;rx:24}
+      .text{font-family:Aptos,Segoe UI,sans-serif;fill:#221818}
+      .title{font-size:28px;font-weight:800}
+      .body{font-size:18px}
+      .arrow{stroke:#8a3b2f;stroke-width:4;marker-end:url(#arrow)}
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#8a3b2f"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="520" fill="url(#bg)"/>
+  <text x="55" y="62" class="text title">CivicLibrary v0.1.0</text>
+  <text x="55" y="94" class="text body">Library policy, program, reference, and collection support</text>
+  <rect x="55" y="140" width="240" height="120" class="box"/>
+  <text x="83" y="180" class="text title">Library staff</text>
+  <text x="83" y="212" class="text body">Policy or program question</text>
+  <text x="83" y="238" class="text body">Collection metadata search</text>
+  <rect x="400" y="105" width="310" height="210" class="box"/>
+  <text x="430" y="150" class="text title">CivicLibrary API</text>
+  <text x="430" y="185" class="text body">Cited policy answers</text>
+  <text x="430" y="212" class="text body">Program answer drafts</text>
+  <text x="430" y="239" class="text body">Reference suggestions</text>
+  <text x="430" y="266" class="text body">Collection guidance</text>
+  <rect x="805" y="110" width="240" height="95" class="box"/>
+  <text x="835" y="150" class="text title">CivicCore</text>
+  <text x="835" y="178" class="text body">Shared foundation</text>
+  <rect x="805" y="250" width="240" height="140" class="hard"/>
+  <text x="835" y="292" class="text title">ILS / Patron Data</text>
+  <text x="835" y="324" class="text body">Future privacy-gated connector design</text>
+  <text x="835" y="350" class="text body">No v0.1.0 integration</text>
+  <line x1="295" y1="200" x2="390" y2="200" class="arrow"/>
+  <line x1="710" y1="165" x2="795" y2="157" class="arrow"/>
+  <line x1="710" y1="252" x2="795" y2="306" class="arrow" stroke-dasharray="10 8"/>
+  <rect x="55" y="340" width="655" height="110" class="hard"/>
+  <text x="85" y="382" class="text title">Hard v0.1.0 Boundaries</text>
+  <text x="85" y="414" class="text body">No patron records, ILS integration, reference-service replacement, legal advice, connectors, or live LLM calls.</text>
+</svg>
