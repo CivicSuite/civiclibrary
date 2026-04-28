@@ -18,16 +18,16 @@ def test_health_reports_civiccore_pin():
     assert client.get("/health").json() == {
         "status": "ok",
         "service": "civiclibrary",
-        "version": "0.1.0",
-        "civiccore_version": "0.2.0",
+        "version": "0.1.1",
+        "civiccore_version": "0.3.0",
     }
 
 
 def test_public_ui_contains_version_boundaries_and_dependency():
     text = client.get("/civiclibrary").text
-    assert "CivicLibrary v0.1.0" in text
+    assert "CivicLibrary v0.1.1" in text
     assert "No patron record access" in text
-    assert "civiccore==0.2.0" in text
+    assert "civiccore==0.3.0" in text
 
 
 def test_api_endpoints_return_deterministic_payloads():

@@ -15,7 +15,7 @@ python -m pip install -e ".[dev]"
 python -m uvicorn civiclibrary.main:app --host 127.0.0.1 --port 8143
 ```
 
-Runtime dependency: `civiccore==0.2.0`.
+Runtime dependency: `civiccore==0.3.0`.
 
 Primary endpoints:
 
@@ -30,4 +30,4 @@ Primary endpoints:
 
 ![CivicLibrary architecture](docs/architecture-civiclibrary.svg)
 
-CivicLibrary is a module on top of CivicCore. v0.1.0 is deterministic and local: no patron-record access, circulation actions, holds, fines, ILS replacement, live LLM calls, or connector runtime is shipped.
+CivicLibrary is a module on top of CivicCore. v0.1.1 is deterministic and local: no patron-record access, circulation actions, holds, fines, ILS replacement, live LLM calls, or connector runtime is shipped.

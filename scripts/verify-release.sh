@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-echo "VERIFY-RELEASE: CivicLibrary v0.1.0"
+echo "VERIFY-RELEASE: CivicLibrary v0.1.1"
 PYTHON_CANDIDATES=()
 [[ -n "${CIVICLIBRARY_RELEASE_PYTHON:-}" ]] && PYTHON_CANDIDATES+=("$CIVICLIBRARY_RELEASE_PYTHON")
 PYTHON_CANDIDATES+=(python python3 py "/mnt/c/Users/scott/AppData/Local/Microsoft/WindowsApps/python.exe")
@@ -26,7 +26,7 @@ rm -rf dist
 from pathlib import Path
 import hashlib
 
-expected = {"civiclibrary-0.1.0-py3-none-any.whl", "civiclibrary-0.1.0.tar.gz"}
+expected = {"civiclibrary-0.1.1-py3-none-any.whl", "civiclibrary-0.1.1.tar.gz"}
 dist = Path("dist")
 found = {p.name for p in dist.iterdir() if p.is_file()}
 missing = expected - found
@@ -41,7 +41,7 @@ PY
 "$PYTHON_BIN" - <<'PY'
 import civiclibrary
 
-assert civiclibrary.__version__ == "0.1.0"
-print("[PASS] package version 0.1.0")
+assert civiclibrary.__version__ == "0.1.1"
+print("[PASS] package version 0.1.1")
 PY
 echo "VERIFY-RELEASE: PASSED"
