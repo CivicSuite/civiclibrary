@@ -7,7 +7,8 @@ def render_public_lookup_page() -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CivicLibrary v0.1.0</title>
+<link rel="icon" href="data:,">
+  <title>CivicLibrary v0.1.1</title>
   <style>
     :root{--ink:#17223b;--muted:#536075;--line:#cbd7ef;--paper:#f7f9ff;--card:#ffffff;--accent:#325da8;--leaf:#458a63}
     *{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;background:radial-gradient(circle at top right,#dfeaff,transparent 34rem),linear-gradient(135deg,#fbfdff,#f1f7f1);color:var(--ink)}
@@ -25,10 +26,10 @@ def render_public_lookup_page() -> str:
     <div>
       <p class="eyebrow">CivicSuite / CivicLibrary</p>
       <h1>Library policy and reference support without patron records.</h1>
-      <p>CivicLibrary v0.1.0 helps library staff answer policy and program questions, search collection metadata, draft collection guidance, and keep patron privacy out of scope.</p>
+      <p>CivicLibrary v0.1.1 helps library staff answer policy and program questions, search collection metadata, draft collection guidance, and keep patron privacy out of scope.</p>
     </div>
     <div class="panel">
-      <h2>v0.1.0 boundary</h2>
+      <h2>v0.1.1 boundary</h2>
       <p class="boundary">No patron record access, no circulation history, no holds or fines, no ILS replacement, no live LLM calls, and no connector runtime ship in this release.</p>
     </div>
   </section>
@@ -39,8 +40,8 @@ def render_public_lookup_page() -> str:
   </section>
   <section class="panel">
     <h2>Architecture</h2>
-    <p><strong>Staff or patron question</strong> -> CivicLibrary deterministic API -> CivicCore foundation. Integrated library system adapters are future read-only designs, not v0.1.0 paths.</p>
-    <p>Dependency: <code>civiccore==0.2.0</code>. Repo: <a href="https://github.com/CivicSuite/civiclibrary">CivicSuite/civiclibrary</a>.</p>
+    <p><strong>Staff or patron question</strong> -> CivicLibrary deterministic API -> CivicCore foundation. Integrated library system adapters are future read-only designs, not v0.1.1 paths.</p>
+    <p>Dependency: <code>civiccore==0.3.0</code>. Repo: <a href="https://github.com/CivicSuite/civiclibrary">CivicSuite/civiclibrary</a>.</p>
   </section>
 </main>
 </body>

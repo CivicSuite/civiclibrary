@@ -4,4 +4,4 @@ For staff: use CivicLibrary to draft cited policy answers, answer program and ev
 
 Boundaries: CivicLibrary does not access patron records, connect to an ILS, manage circulation, place holds, assess fines, replace professional reference service, or replace library systems of record.
 
-For IT: install with python -m pip install -e ".[dev]" and run with python -m uvicorn civiclibrary.main:app --host 127.0.0.1 --port 8143. Depends on civiccore==0.2.0.
+For IT: install with python -m pip install -e ".[dev]" and run with python -m uvicorn civiclibrary.main:app --host 127.0.0.1 --port 8143. Depends on civiccore==0.3.0.

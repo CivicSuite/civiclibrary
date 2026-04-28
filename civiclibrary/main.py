@@ -1,7 +1,7 @@
 """FastAPI runtime foundation for CivicLibrary."""
 
 from civiccore import __version__ as CIVICCORE_VERSION
-from fastapi import FastAPI
+from fastapi import FastAPI, Response
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
@@ -17,6 +17,12 @@ app = FastAPI(
     version=__version__,
     description="Library policy, program, reference, and collection support foundation.",
 )
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon() -> Response:
+    """Return an empty favicon response so browser QA has a clean console."""
+
+    return Response(status_code=204)
 
 POLICY_SOURCES = [
     LibraryPolicySource(
@@ -63,7 +69,7 @@ def root() -> dict[str, str]:
             "ILS replacement, circulation actions, live LLM calls, and connector runtime are "
             "not implemented yet."
         ),
-        "next_step": "Post-v0.1.0 roadmap: read-only ILS metadata adapter design",
+        "next_step": "Post-v0.1.1 roadmap: read-only ILS metadata adapter design",
     }
 
 
