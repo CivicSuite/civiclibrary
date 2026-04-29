@@ -2,7 +2,7 @@
 
 ## Non-Technical Staff
 
-CivicLibrary helps library staff prepare cited policy answers, answer program and event questions, search collection metadata, and draft collection-development guidance.
+CivicLibrary helps library staff prepare cited policy answers, answer program and event questions, search collection metadata, draft collection-development guidance, and optionally retrieve saved program/collection workpapers.
 
 Librarians remain responsible for every answer, reference result, and collection guidance note. CivicLibrary does not access patron records, connect to an ILS, manage circulation, place holds, assess fines, replace professional reference service, or replace library systems of record.
 
@@ -16,6 +16,8 @@ python -m uvicorn civiclibrary.main:app --host 127.0.0.1 --port 8143
 ```
 
 Runtime dependency: `civiccore==0.3.0`.
+
+Optional persistence: set `CIVICLIBRARY_WORKPAPER_DB_URL` to enable SQLAlchemy-backed program answer and collection-guidance records. Leave it unset for deterministic stateless operation.
 
 Primary endpoints:
 

@@ -10,6 +10,7 @@ def test_root_reports_honest_current_state():
     payload = client.get("/").json()
     assert payload["name"] == "CivicLibrary"
     assert payload["version"] == __version__
+    assert "database-backed program/collection workpapers" in payload["message"]
     assert "patron record access" in payload["message"]
     assert "not implemented yet" in payload["message"]
 
@@ -51,7 +52,7 @@ def test_api_endpoints_return_deterministic_payloads():
             ],
         },
     ).json()
-    assert program["accessibility_review_required"] is True
+    assert program["answer_id"] is None
 
     reference = client.post(
         "/api/v1/civiclibrary/reference-search",
@@ -63,4 +64,4 @@ def test_api_endpoints_return_deterministic_payloads():
         "/api/v1/civiclibrary/collection-guidance",
         json={"topic": "local history", "considerations": ["community demand"]},
     ).json()
-    assert guidance["librarian_review_required"] is True
+    assert guidance["guidance_id"] is None

@@ -2,6 +2,11 @@
 
 ## [0.1.1] - 2026-04-28
 
+### Added
+
+- Optional SQLAlchemy-backed program answer and collection-guidance workpaper records via `CIVICLIBRARY_WORKPAPER_DB_URL`.
+- Program answer and collection-guidance retrieval endpoints for persisted records.
+
 ### Changed
 
 - Dependency-alignment release: moved CivicLibrary to `civiccore==0.3.0` while preserving the existing v0.1.0 runtime foundation behavior.
